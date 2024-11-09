@@ -1,22 +1,22 @@
 package entities;
 
-public class User {
-	private String userID;
-	private String userPass;
+public abstract class User {
+	private String ID;
+	private String Pass;
 	private boolean firstLogin;
 	
-	public User(String userID, String userPass, boolean firstLogin) {
-		this.userID = userID;
-		this.userPass = userPass;
+	public User(String ID, String Pass, boolean firstLogin) {
+		this.ID = ID;
+		this.Pass = Pass;
 		this.firstLogin = firstLogin;
 	}
 	
 	public String getUserID() {
-		return this.userID;
+		return this.ID;
 	}
 	
-	public boolean validatePassword(String userPass) {
-		if(this.userPass.equals(userPass)) return true;
+	public boolean validatePassword(String Pass) {
+		if(this.Pass.equals(Pass)) return true;
 		return false;
 	}
 	
@@ -26,11 +26,11 @@ public class User {
 	
 	public void changePassword(String newUserPass) {
 		this.firstLogin = false;
-		this.userPass = newUserPass;
+		this.Pass = newPass;
 	}
 	
 	public void resetPassword() {
 		this.firstLogin = true;
-		this.userPass = "password";
+		this.Pass = "password";
 	}
 }
