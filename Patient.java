@@ -1,6 +1,6 @@
 package entities;
 
-public abstract class Patient {
+public class Patient {
     private String patientID;
     private String patientPass;
     private boolean firstLogin;
