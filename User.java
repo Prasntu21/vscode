@@ -11,7 +11,7 @@ public abstract class User {
 		this.firstLogin = firstLogin;
 	}
 	
-	public String getUserID() {
+	public String getID() {
 		return this.ID;
 	}
 	
@@ -24,7 +24,7 @@ public abstract class User {
 		return this.firstLogin;
 	}
 	
-	public void changePassword(String UserPass) {
+	public void changePassword(String Pass) {
 		this.firstLogin = false;
 		this.Pass = newPass;
 	}
