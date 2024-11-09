@@ -29,8 +29,4 @@ public abstract class User {
 		this.Pass = newPass;
 	}
 	
-	public void resetPassword() {
-		this.firstLogin = true;
-		this.Pass = "password";
-	}
 }
