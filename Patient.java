@@ -8,22 +8,9 @@ public class Patient extends user {
 
     
     public String getPatientID() {
-        return this.patientID;
+        return this.getID;
     }
 
-    public boolean validatePassword(String patientPass) {
-        return this.patientPass.equals(patientPass);
-    }
-
-    public boolean isFirstLogin() {
-        return this.firstLogin;
-    }
-
-    
-    public void changePassword(String newPatientPass) {
-        this.firstLogin = false;
-        this.patientPass = newPatientPass;
-    }
 
     public void resetPassword() {
         this.firstLogin = true;
