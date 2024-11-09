@@ -1,6 +1,6 @@
 package entities;
 
-public class Patient extends user {
+public class Patient extends User {
 
     public Patient(String patientID, String patientPass, boolean firstLogin) {
         super(patientID, patientPass, firstLogin)
@@ -8,7 +8,7 @@ public class Patient extends user {
 
     
     public String getPatientID() {
-        return this.getID;
+        return this.getID();
     }
 
 
