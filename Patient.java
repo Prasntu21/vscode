@@ -12,11 +12,6 @@ public class Patient extends user {
     }
 
 
-    public void resetPassword() {
-        this.firstLogin = true;
-        this.patientPass = "defaultPassword";
-    }
-
     @Override
     public String toString() {
         return "Patient {" +
