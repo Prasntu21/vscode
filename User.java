@@ -1,6 +1,6 @@
 package entities;
 
-public abstract class User {
+public class User {
 	private String userID;
 	private String userPass;
 	private boolean firstLogin;
