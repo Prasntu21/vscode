@@ -1,0 +1,93 @@
+package entities;
+
+public class Appointment {
+    private String appointmentID;
+    private Patient patient;
+    private String doctorID;
+    private Doctor doctor;
+    private Date appointmentDate;
+    private String appointmentTime; 
+    private String status;
+    private PatientMedicalRecord patientMedicalRecord; 
+
+    public Appointment(String appointmentID, String patientID, String doctorID, String doctorGender, 
+                       Date appointmentDate, String appointmentTime, String status, 
+                       PatientMedicalRecord patientMedicalRecord) {
+        this.appointmentID = appointmentID;
+        this.patientID = patientID;
+        this.doctorID = doctorID;
+        this.doctorGender = doctorGender;
+        this.appointmentDate = appointmentDate;
+        this.appointmentTime = appointmentTime;
+        this.status = status;
+        this.patientMedicalRecord = patientMedicalRecord;
+    }
+
+  
+    public String getAppointmentID() {
+        return appointmentID;
+    }
+
+    public String getPatientID() {
+        return patientID;
+    }
+
+    public String getDoctorID() {
+        return doctorID;
+    }
+
+    public String getDoctorGender() {
+        return doctorGender;
+    }
+
+    public Date getAppointmentDate() {
+        return appointmentDate;
+    }
+
+    public String getAppointmentTime() {
+        return appointmentTime;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public PatientMedicalRecord getPatientMedicalRecord() {
+        return patientMedicalRecord;
+    }
+
+ 
+    public void setDoctorGender(String doctorGender) {
+        this.doctorGender = doctorGender;
+    }
+
+    public void setAppointmentDate(Date appointmentDate) {
+        this.appointmentDate = appointmentDate;
+    }
+
+    public void setAppointmentTime(String appointmentTime) {
+        this.appointmentTime = appointmentTime;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public void setPatientMedicalRecord(PatientMedicalRecord patientMedicalRecord) {
+        this.patientMedicalRecord = patientMedicalRecord;
+    }
+
+    @Override
+    public String toString() {
+        return "Appointment {" +
+                "appointmentID='" + appointmentID + '\'' +
+                ", patientID='" + patientID + '\'' +
+                ", doctorID='" + doctorID + '\'' +
+                ", doctorGender='" + doctorGender + '\'' +
+                ", appointmentDate=" + appointmentDate +
+                ", appointmentTime='" + appointmentTime + '\'' +
+                ", status='" + status + '\'' +
+                ", patientMedicalRecord=" + patientMedicalRecord +
+                '}';
+    }
+}
