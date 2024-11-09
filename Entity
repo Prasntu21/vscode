@@ -2,9 +2,9 @@ package entities;
 
 public class Appointment {
     private String appointmentID;
-    private Patient patient;
+    private String PatientID;
     private String doctorID;
-    private Doctor doctor;
+    private String doctorGender;
     private Date appointmentDate;
     private String appointmentTime; 
     private String status;
