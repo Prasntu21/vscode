@@ -24,7 +24,7 @@ public abstract class User {
 		return this.firstLogin;
 	}
 	
-	public void changePassword(String newUserPass) {
+	public void changePassword(String UserPass) {
 		this.firstLogin = false;
 		this.Pass = newPass;
 	}
