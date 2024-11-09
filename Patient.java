@@ -1,14 +1,9 @@
 package entities;
 
-public class Patient {
-    private String patientID;
-    private String patientPass;
-    private boolean firstLogin;
+public class Patient extends user {
 
     public Patient(String patientID, String patientPass, boolean firstLogin) {
-        this.patientID = patientID;
-        this.patientPass = patientPass;
-        this.firstLogin = firstLogin;
+        super(patientID, patientPass, firstLogin)
     }
 
     
