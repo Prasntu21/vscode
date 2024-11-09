@@ -1,27 +1,18 @@
 package entities;
 
-public abstract class Doctor {
-    private String doctorID;
-    private String doctorPass;
-    private boolean firstLogin;
+public class Doctor extends User {
     private String specialty;
     private List<String> patientIDs; // List of the IDs for patients
 
     public Doctor(String doctorID, String doctorPass, boolean firstLogin, String specialty, List<String> patientIDs) {
-        this.doctorID = doctorID;
-        this.doctorPass = doctorPass;
-        this.firstLogin = firstLogin;
+        super(doctorId, doctorPass, firstLogin)
         this.specialty = specialty;
         this.patientIDs = patientIDs;
     }
 
-    // Getters
-    public String getDoctorID() {
+   
+    public String this.getID() {
         return doctorID;
-    }
-
-    public boolean validatePassword(String doctorPass) {
-        return this.doctorPass.equals(doctorPass);
     }
 
     public boolean isFirstLogin() {
@@ -45,15 +36,6 @@ public abstract class Doctor {
         this.patientIDs = patientIDs;
     }
 
-    public void changePassword(String newDoctorPass) {
-        this.firstLogin = false;
-        this.doctorPass = newDoctorPass;
-    }
-
-    public void resetPassword() {
-        this.firstLogin = true;
-        this.doctorPass = "defaultPassword";
-    }
 
     @Override
     public String toString() {
